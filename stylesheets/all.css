@@ -12031,4 +12031,9 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.header {
+  height: 460px;
+  background-position: center center;
+  background-size: cover;
 }/*# sourceMappingURL=all.css.map */
