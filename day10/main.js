@@ -2,20 +2,23 @@ import barpage from './stackbar.js';
 // 定義下拉菜單的數據
 export default function homepage(){
   killall()
-    
-  // 創建 tree-chart-container 元素
-  var barChartContainer = d3.select("body")
-  .append("div")
-  .attr("class", "tree-chart-container");
 
   // 創建 controls 元素
   var controlsContainer = d3.select("body")
   .append("div")
   .attr("class", "controls");
+  
+  var barChartContainer = d3.select("body")
+  .append("div")
+  .attr("class", "tree-chart-container");
 
   // 創建 select 元素
   var selectElement = controlsContainer.append("select")
-  .attr("id", "dropdown");
+  .attr("id", "dropdown").style('top', '10px') // 设置 option 元素的顶部定位样式为 50px
+  .style('left', "50px") // 设置 option 元素的左边定位样式为 50px
+  // .style('background-color','yellowgreen')
+  .style('position', 'static')
+  .style('font-size',"16px");
 
   const dropdownData = [
     { label: '2020', options: ['營收', '淨利', '資本支出'] },
@@ -24,12 +27,7 @@ export default function homepage(){
   
   // 選擇下拉菜單的容器元素，並設置樣式
   const dropdown = d3.select('#dropdown')
-    .style('background-color','yellowgreen')
-    .style('position', 'fixed')
-    .style('font-size',"16px")
-    .style('top', '40px')
-    .style('left', '40px');
-  
+   
   // 遍歷下拉菜單的數據陣列
   dropdownData.forEach(group => {
     // 創建下拉菜單的選項組元素，並設置標籤屬性為當前組的標籤
@@ -44,6 +42,7 @@ export default function homepage(){
 
     });
   });
+  
   function nan(d) {
     return {
       '行業': parseNA(d['Type']), // 將屬性 category 的值進行 parseNA 轉換
@@ -61,7 +60,7 @@ export default function homepage(){
 
   // 使用 d3.csv() 方法從 'example.csv' 讀取資料，並在讀取完成後執行指定的回呼函式
   d3.csv('example.csv',nan).then(res => {
-    console.log('local csv', res); // 在控制台輸出從 CSV 檔案讀取的資料的第一個物件
+    // console.log('local csv', res); // 在控制台輸出從 CSV 檔案讀取的資料的第一個物件
     setuptreemap(res)
 
   // 印出轉換後的結果
@@ -103,10 +102,10 @@ function setuptreemap(data) {
 function draw(res, keywords) {
   d3.selectAll('.tree-chart-container svg').remove(); // 移除所有具有 'tree-chart-container' 類別的元素中的 SVG 元素
 
+  // 創建 tree-chart-container 元素
 
-
-  const width = 1440; // 設定畫布的寬度為 800 像素
-  const height = 900; // 設定畫布的高度為 600 像素
+  const width = document.body.clientWidth*0.7; // 設定畫布的寬度為 隨body大小變化
+  const height = document.body.clientWidth*0.5; // 設定畫布的高度為  隨body大小變化
   const chart_margin = { top: 80, right: 40, bottom: 80, left: 40 }; // 設定圖表的邊距，包含上、右、下、左四個方向的邊距值
   const chart_width = width - (chart_margin.left + chart_margin.right); // 計算圖表的寬度，即畫布寬度減去左右邊距
   const chart_height = height - (chart_margin.top + chart_margin.bottom); // 計算圖表的高度，即畫布高度減去上下邊距
@@ -116,12 +115,12 @@ function draw(res, keywords) {
     .attr('width', width) // 設定 svg 元素的寬度
     .attr('height', height) // 設定 svg 元素的高度
     .append('g') // 在 svg 元素中創建一個 g 元素，用於放置圖表元素
-    .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
+    .attr("style", "max-width: 100%; height: auto;")
     .attr("font-family", "sans-serif")
     .attr("font-size", 12)
     .attr('transform', `translate(${chart_margin.left},${chart_margin.top})`)
     ; // 設定 g 元素的平移位置，以適應圖表邊距
- 
+  
   let groupedData = d3.group(res, function(res) {
     return res.行業; // 根據 category 屬性將資料進行分組
   });
@@ -257,7 +256,8 @@ canvas.append('text')
   })
   .attr('y', 10)
   .style('text-anchor', 'middle') // 水平居中
-  .style('dominant-baseline', 'middle'); // 垂直居中;
+  .style('dominant-baseline', 'middle') // 垂直居中;
+  .style('font-size',14);
 
   canvas.append('text')
   .text((d) => {
@@ -266,7 +266,8 @@ canvas.append('text')
   .attr('x', (d) => {
     return (d.x1-d.x0)/2;
   })
-  .attr('y', 20)
+  .attr('y', 25)
+  .style('font-size',14)
   .style('text-anchor', 'middle') // 水平居中
   .style('dominant-baseline', 'middle'); // 垂直居中;
 // 篩選出深度為 1 的節點作為圖例的數據
