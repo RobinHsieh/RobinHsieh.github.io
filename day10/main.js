@@ -59,7 +59,7 @@ export default function homepage(){
   const parseNA = string => (string === 'NA' ? undefined : string);
 
   // 使用 d3.csv() 方法從 'example.csv' 讀取資料，並在讀取完成後執行指定的回呼函式
-  d3.csv('example.csv',nan).then(res => {
+  d3.csv('./day10/example.csv',nan).then(res => {
     // console.log('local csv', res); // 在控制台輸出從 CSV 檔案讀取的資料的第一個物件
     setuptreemap(res)
 

@@ -1208,7 +1208,10 @@ progress {
   }
   .col-md-1 {
     flex: 0 0 auto;
+    /*
     width: 8.33333333%;
+    */
+    width: 12%;
   }
   .col-md-2 {
     flex: 0 0 auto;
@@ -1224,7 +1227,10 @@ progress {
   }
   .col-md-5 {
     flex: 0 0 auto;
+    /*
     width: 41.66666667%;
+    */
+    width: 38%;
   }
   .col-md-6 {
     flex: 0 0 auto;
@@ -12044,8 +12050,180 @@ textarea.form-control-lg {
 
 .height-s5 {
   height: 300px;
+  width: 530px;
 }
 
 .height-s6 {
   height: 360px;
 }/*# sourceMappingURL=all.css.map */
+
+.custom-div {
+  width: 100%; /* 設定寬度等同於視窗寬度 */
+  height: 55vw; /* 設定高度為視窗寬度的0.6倍 */
+  /* 這裡可以添加更多樣式來美化這個新的元素 */
+}
+
+.tree-chart-container {
+  position : absolute;
+  top : 940px;
+  left: 75px;
+  border: 1px solid #ccc;
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: 150px 100px;
+  background-position: 35% 0%;
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.stackbar-chart-container {
+  border: 1px solid #ccc;
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: 150px 100px;
+  background-position: 50% 0%;
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+#cloudcontainer{
+  border: 5px solid #ccc;
+} 
+.controls{
+  position : absolute;
+  top : 900px;
+  left: 75px;
+}
+.bottom-container{
+  position : absolute;
+  top : 900px;
+  left: 75px;
+  z-index:2 ;
+}
+
+.stackbar-chart-container{
+  position : absolute;
+  top : 940px;
+  left: 0px;
+}
+
+.select-container{
+  position : absolute;
+  top : 900px;
+  left: 100px;
+}
+
+/*
+my style
+*/
+
+#title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+
+#title2 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+
+.h2-add-style {
+  color: #455191;
+  border-left: 8px solid #999;
+  padding: 8px 20px;
+  border-top: solid 2px #6cb4e4;
+  border-bottom: solid 2px #6cb4e4;
+  background: repeating-linear-gradient(-45deg,#f0f8ff,#f0f8ff 3px,#e9f4ff 3px,#e9f4ff 7px);
+}
+
+.h4-add-sytle-2 {
+  color: #7c8798;
+  border-bottom: 5px solid #455191;
+  padding: 8px 20px;
+}
+
+.h4-style-all-title {
+  margin-top: 45px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  border-bottom: 3px solid #d7d7d7;
+  border-left: 5px solid #7cc6e7;
+  background-color: #f9fafa;
+  box-shadow: 1px 1px 3px 0 #dfefff;
+  text-align: left;
+}
+
+.p-add-style {
+  width: 85%;
+  margin: 13px auto;
+  padding: 13px;
+  border: 2px dashed #999;
+  border-radius: 10px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.button-fix-width {
+  width: 94px;
+}
+
+.effect-zoom-in {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+/*初始設定*/
+.effect-zoom-in img {
+  display: block;
+  position: relative;
+  opacity:1;
+  transform:scale(1,1);
+  transition: all 1s ease-out; /*時間 特效*/
+}
+/*滑鼠移入特效*/
+.effect-zoom-in:hover img{
+  opacity:.8; /*透明度*/
+  transform:scale(1.2, 1.2); /*XY放大倍率*/
+}
+
+.row .shift-left {
+  transform:translate(10px);
+  transition:transform .5s;
+}
+
+.row:hover .shift-left {
+  transform:translate(0px)
+}
+
+.row .shift-right {
+  transform:translate(-10px);
+  transition:transform .5s;
+}
+
+.row:hover .shift-right {
+  transform:translate(0px)
+}
+
+.kokuban-s2 {
+  position: relative;
+  padding: 1em;
+  background: #006633;
+  color: #fff;
+  border: 8px solid #b2771f;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
+}
+
+.picture-frame {
+  position: relative;
+  border: 8px solid #b6d4fe;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
+}
+

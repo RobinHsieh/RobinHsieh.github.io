@@ -82,7 +82,7 @@ export default function barpage(specificIndustry) {
   }
 
   // 使用 d3.csv() 方法从 'example.csv' 读取数据，并在读取完成后执行指定的回调函数
-  d3.csv('example-Carbon.csv', nan).then(bardata => {
+  d3.csv('./day10/example-Carbon.csv', nan).then(bardata => {
     // console.log('local csv', bardata); // 在控制台輸出從 CSV 檔案讀取的資料的第一個物件
     setupstackbarmap(bardata, specificIndustry); // 调用 setupstackbarmap 函数，传入读取的数据和特定行业参数
     drawscatter(specificIndustry);

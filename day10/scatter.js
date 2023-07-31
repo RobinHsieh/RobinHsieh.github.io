@@ -2,22 +2,29 @@ import word_cloud from './word_cloud.js';
 
 export default function drawscatter(specificIndustry) {
   // 创建单选按钮容器  
-  let bottomContainer = d3.select('.bottom-container');
+  let bottomContainer = d3.select("body")
+  .append("div") // 在 body 元素中添加一个 div 元素
+  .attr("class", "select-container");
 
+  
   // 创建横轴单选按钮容器
   let radioContainerX = bottomContainer.append("div")
-    .style('position', 'fixed')
-    .style('top', '2%')
-    .style('left', '70%');
+    .style('position', 'relative')
+    .style('top', '-20px')
+    .style('left', '62vw')
+    .style('z-index', '1'); // 设置较高的z-index值
+
 
   // 添加横轴标签
   bottomContainer.append("div")
     .text("横轴")
-    .style('position', 'fixed')
-    .style('font-size', "16px")
-    .style('top', '2%')
-    .style('left', "68%")
-    .style('font-family', 'Arial'); // 设置字体样式，例如 Arial
+    .style('position', 'relative')
+    .style('font-size', "20px")
+    .style('top', '-47px')
+    .style('left', "58vw")
+    .style('font-family', 'Arial') // 设置字体样式，例如 Arial
+    .style('font-weight', 'bold'); // 设置字体粗细为粗体
+
 
   // 添加单选按钮 A，表示营收
   radioContainerX.append("input")
@@ -51,17 +58,21 @@ export default function drawscatter(specificIndustry) {
   // 添加纵轴标签
   bottomContainer.append("div")
     .text("縱軸")
-    .style('position', 'fixed')
-    .style('font-size', "16px")
-    .style('top', '5%')
-    .style('left', "68%")
-    .style('font-family', 'Arial'); // 设置字体样式，例如 Arial
+    .style('position', 'relative')
+    .style('font-size', "20px")
+    .style('top', '-47px')
+    .style('left', "58vw")
+    .style('font-family', 'Arial') // 设置字体样式，例如 Arial
+    .style('font-weight', 'bold'); // 设置字体粗细为粗体
+
 
   // 创建纵轴单选按钮容器
   let radioContainerY = bottomContainer.append("div")
-    .style('position', 'fixed')
-    .style('top', '5%')
-    .style('left', '70%');
+    .style('position', 'relative')
+    .style('top', '-75px')
+    .style('left', '62vw')
+    .style('z-index', '1'); // 设置较高的z-index值
+
 
   // 添加单选按钮 A，表示碳排
   radioContainerY.append("input")
@@ -140,7 +151,7 @@ export default function drawscatter(specificIndustry) {
   }
   
   // 从 CSV 文件读取数据并进行处理
-  d3.csv('example-Carbon.csv', nan).then(scatterdata => {
+  d3.csv('./day10/example-Carbon.csv', nan).then(scatterdata => {
     // console.log('local csv', scatterdata); // 在控制台输出从 CSV 文件读取的数据的第一个对象
     setupscatter(scatterdata, specificIndustry); // 调用 setupstackbarmap 函数，传入读取的数据和特定行业参数
   });
@@ -488,6 +499,14 @@ function drawplot(data, xkey, ykey, specificIndustry) {
       .attr("stroke-width", 1.5) // 设置线的宽度为 1.5
       .attr("fill", "none"); // 设置线的填充颜色为无（不填充）
 
+    svg.append("text")
+      .attr("x", chart_width/2+chart_margin.left) // x 坐标为图表宽度的一半，使标题居中
+      .attr("y", chart_margin.top/2) // y 坐标为图表高度，使标题位于图表底部
+      .text("雙擊圓點可見詳細資料")
+      .attr("fill", "brown") // 文字颜色为黑色
+      .attr("text-anchor", "middle") // 文字水平对齐方式为居中对齐
+      .attr("dominant-baseline", "hanging") // 文字垂直对齐方式为悬挂对齐
+      .style("font-size", "20px"); // 文字字体大小为 16px
 
     // 在右下角添加文字
     svg.append("text")
