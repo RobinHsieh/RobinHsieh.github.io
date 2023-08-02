@@ -64,7 +64,7 @@ function drawcloud(xPos,yPos,words,company){
   const svg = container.append("svg")
     .attr("width", chart_width)
     .attr("height", chart_height)
-    .style("background-image", "url(http://127.0.0.1:5500/day10/cloud.png)")
+    .style("background-image", "url(https://imgur.com/HJB0fD6.png)")
     .style("background-size", "800px 800px")
     .style("background-repeat","no-repeat")
     .style("background-position", "60% 60%");
@@ -81,7 +81,7 @@ function drawcloud(xPos,yPos,words,company){
 
   // 風險插圖
 svg.append("image")
-.attr("href", "http://127.0.0.1:5500/day10/risk.jpg")
+.attr("href", "https://imgur.com/44DGITP.jpg")
 .attr("width", 50)
 .attr("height", 50)
 .attr("x", 620)
@@ -89,7 +89,7 @@ svg.append("image")
 
 // 目標插圖
 svg.append("image")
-.attr("href", "http://127.0.0.1:5500/day10/target.jpg")
+.attr("href", "https://imgur.com/yN4Hftj.jpg")
 .attr("width",50)
 .attr("height", 50)
 .attr("x", 500)
@@ -97,7 +97,7 @@ svg.append("image")
 
 // 策略插圖
 svg.append("image")
-.attr("href", "http://127.0.0.1:5500/day10/strategy.jpg")
+.attr("href", "https://imgur.com/jJ3c2Be.jpg")
 .attr("width",50)
 .attr("height", 50)
 .attr("x", 630)
