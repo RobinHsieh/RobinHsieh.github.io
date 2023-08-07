@@ -12044,6 +12044,12 @@ textarea.form-control-lg {
   background-size: cover;
 }
 
+
+.height-s3 {
+  height: 230px;
+  width: 200px;
+}
+
 .height-s4 {
   height: 250px;
   width: 400px;
