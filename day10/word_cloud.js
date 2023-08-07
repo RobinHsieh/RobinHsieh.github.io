@@ -4,9 +4,11 @@ export default function word_cloud(xPos,yPos,company){
       'E達成': (d['E~達成']), // 将属性 '產業類別' 的值进行转换
       'E目標': (d['E~目標']), // 将属性 '產業類別' 的值进行转换
       '風險': (d['風險']), // 将属性 '產業類別' 的值进行转换
+      '實體風險':(d['實體風險']),
       '重要度'  : Number(d['重要度']),
       'cdp'    : d['CDP'],
-      'sbti'   : d['SBTI']
+      'sbti'   : d['SBTi'],
+      'msci'   : d['MSCI']
     }
   }
   let path = "csv/"+company.slice(-4)+".csv";
@@ -20,7 +22,7 @@ function drawcloud(xPos,yPos,words,company){
 
   const cdp = words[0].cdp;
   const sbti = words[0].sbti;
-
+  const msci = words[0].msci;
   // 指定新視窗的尺寸和位置
   const windowWidth = 1280;
   const windowHeight = 960;
@@ -57,8 +59,8 @@ function drawcloud(xPos,yPos,words,company){
    container.append("div")
      .attr("id", "subtitle")
      .style("text-align", "center")
-     .style("font-size", "28px")
-     .html("CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti);
+     .style("font-size", "24px")
+     .html("CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti+"&nbsp;&nbsp;&nbsp;MSCI ESG rating: "+msci);
 
 // 在 <div> 元素中創建一個 SVG 元素
   const svg = container.append("svg")
@@ -105,9 +107,9 @@ svg.append("image")
 
 // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
 // Wordcloud features that are different from one word to the other must be here   
-function createWordCloud(words, color, xPos, yPos) {
+function createWordCloud(words, color, xPos, yPos,width,height) {
   let layout = d3.layout.cloud()
-    .size([480, 250])
+    .size([width, height])
     .words(words.map(function(d) { return { text: d.text, size: d.size }; }))
     .padding(5) // space between words
     .rotate(0)
@@ -118,7 +120,7 @@ function createWordCloud(words, color, xPos, yPos) {
 
   function draw(words) {
 
-    // // 確認文字雲位置
+    // 確認文字雲位置
     // const cloudWidth = layout.size()[0];
     // const cloudHeight = layout.size()[1];
 
@@ -149,10 +151,10 @@ function createWordCloud(words, color, xPos, yPos) {
 }
 
 // Usage example for draw1 and draw2
-createWordCloud(words.map(function(d) { return { text: d.E達成, size: d.重要度+2}; }), "#00A86B",680, 410);
-createWordCloud(words.map(function(d) { return { text: d.E目標, size: d.重要度+2 }; }), "#9966CB", 0, 200);
-// createWordCloud(words.map(function(d) { return { text: d.轉型風險, size: d.重要度+4 }; }), "#F9A602", 400, -30);
-createWordCloud(words.map(function(d) { return { text: d.風險, size: d.重要度+2 }; }), "red", 680, 5);
+createWordCloud(words.map(function(d) { return { text: d.E達成, size: d.重要度+2}; }), "#00A86B",680, 410,480,250);
+createWordCloud(words.map(function(d) { return { text: d.E目標, size: d.重要度+2 }; }), "#9966CB", 0, 200,480,250);
+createWordCloud(words.map(function(d) { return { text: d.風險, size: d.重要度+2 }; }), "#FFA600", 680, 105,480,150);
+createWordCloud(words.map(function(d) { return { text: d.實體風險, size: d.重要度+2 }; }), "red", 680, 5,480,100);
 
 // 设置弧度路径的半径
 const radius = 125;
