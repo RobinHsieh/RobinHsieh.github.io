@@ -12066,7 +12066,10 @@ textarea.form-control-lg {
 
 .tree-chart-container {
   position : absolute;
+  /*
   top : 940px;
+  */
+  top: 1840px;
   left: 75px;
   border: 1px solid #ccc;
   background-image: url('background.jpg');
@@ -12089,25 +12092,37 @@ textarea.form-control-lg {
 } 
 .controls{
   position : absolute;
+  /*
   top : 900px;
+  */
+  top : 1800px;
   left: 75px;
 }
 .bottom-container{
   position : absolute;
+  /*
   top : 900px;
+  */
+  top : 1800px;
   left: 75px;
   z-index:2 ;
 }
 
 .stackbar-chart-container{
   position : absolute;
+  /*
   top : 940px;
+  */
+  top : 1840px;
   left: 0px;
 }
 
 .select-container{
   position : absolute;
+  /*
   top : 900px;
+  */
+  top : 1800px;
   left: 100px;
 }
 

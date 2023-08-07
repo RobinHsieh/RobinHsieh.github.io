@@ -1,125 +1,88 @@
 import word_cloud from './word_cloud.js';
 
 export default function drawscatter(specificIndustry) {
-  // 创建单选按钮容器  
-  let bottomContainer = d3.select("body")
-  .append("div") // 在 body 元素中添加一个 div 元素
-  .attr("class", "select-container");
-
+    // 创建单选按钮容器  
+    let bottomContainer = d3.select("body")
+      .append("div") // 在 body 元素中添加一个 div 元素
+      .attr("class", "select-container");
   
-  // 创建横轴单选按钮容器
-  let radioContainerX = bottomContainer.append("div")
-    .style('position', 'relative')
-    .style('top', '-20px')
-    .style('left', '62vw')
-    .style('z-index', '1'); // 设置较高的z-index值
-
-
-  // 添加横轴标签
-  bottomContainer.append("div")
-    .text("横轴")
-    .style('position', 'relative')
-    .style('font-size', "20px")
-    .style('top', '-47px')
-    .style('left', "58vw")
-    .style('font-family', 'Arial') // 设置字体样式，例如 Arial
-    .style('font-weight', 'bold'); // 设置字体粗细为粗体
-
-
-  // 添加单选按钮 A，表示营收
-  radioContainerX.append("input")
-    .attr("type", "radio")
-    .attr("id", "radioa")
-    .attr("name", "myRadioButtonsX") // 设置相同的 name 属性
-    .attr("checked", true); // 默认选择项目
-
-  radioContainerX.append("label")
-    .attr("for", "radioa")
-    .text("營收");
-
-  // 添加单选按钮 B，表示净利
-  radioContainerX.append("input")
-    .attr("type", "radio")
-    .attr("id", "radiob")
-    .attr("name", "myRadioButtonsX"); // 设置相同的 name 属性
-  radioContainerX.append("label")
-    .attr("for", "radiob")
-    .text("淨利");
-
-  // 添加单选按钮 C，表示资本支出
-  radioContainerX.append("input")
-    .attr("type", "radio")
-    .attr("id", "radioc")
-    .attr("name", "myRadioButtonsX"); // 设置相同的 name 属性
-  radioContainerX.append("label")
-    .attr("for", "radioc")
-    .text("資本支出");
-
-  // 添加纵轴标签
-  bottomContainer.append("div")
-    .text("縱軸")
-    .style('position', 'relative')
-    .style('font-size', "20px")
-    .style('top', '-47px')
-    .style('left', "58vw")
-    .style('font-family', 'Arial') // 设置字体样式，例如 Arial
-    .style('font-weight', 'bold'); // 设置字体粗细为粗体
-
-
-  // 创建纵轴单选按钮容器
-  let radioContainerY = bottomContainer.append("div")
-    .style('position', 'relative')
-    .style('top', '-75px')
-    .style('left', '62vw')
-    .style('z-index', '1'); // 设置较高的z-index值
-
-
-  // 添加单选按钮 A，表示碳排
-  radioContainerY.append("input")
-    .attr("type", "radio")
-    .attr("id", "radioA")
-    .attr("name", "myRadioButtonsY") // 设置相同的 name 属性
-    .attr("checked", true); // 默认选择项目
+    // 创建横轴单选按钮容器
+    let radioContainerX = bottomContainer.append("div")
+      .style('position', 'relative')
+      .style('top', '-20px')
+      .style('left', '62vw')
+      .style('z-index', '1'); // 设置较高的z-index值
+  
+    // 添加横轴标签
+    bottomContainer.append("div")
+      .text("横轴")
+      .style('position', 'relative')
+      .style('font-size', "20px")
+      .style('top', '-47px')
+      .style('left', "58vw")
+      .style('font-family', 'Arial') // 设置字体样式，例如 Arial
+      .style('font-weight', 'bold'); // 设置字体粗细为粗体
+  
+    // 添加纵轴标签
+    bottomContainer.append("div")
+      .text("縱軸")
+      .style('position', 'relative')
+      .style('font-size', "20px")
+      .style('top', '-47px')
+      .style('left', "58vw")
+      .style('font-family', 'Arial') // 设置字体样式，例如 Arial
+      .style('font-weight', 'bold'); // 设置字体粗细为粗体
+  
+    // 创建纵轴单选按钮容器
+    let radioContainerY = bottomContainer.append("div")
+      .style('position', 'relative')
+      .style('top', '-75px')
+      .style('left', '62vw')
+      .style('z-index', '1'); // 设置较高的z-index值
+  
+    // 添加单选按钮 A，表示营收
+    addRadioButton(radioContainerX, "radioa", "myRadioButtonsX", "營收");
+  
+    // 添加单选按钮 B，表示净利
+    addRadioButton(radioContainerX, "radiob", "myRadioButtonsX", "淨利");
+  
+    // 添加单选按钮 C，表示资本支出
+    addRadioButton(radioContainerX, "radioc", "myRadioButtonsX", "資本支出");
+  
+    // 添加单选按钮 A，表示碳排
+    addRadioButton(radioContainerY, "radioA", "myRadioButtonsY", "碳排");
+  
+    // 添加单选按钮 B，表示用電量
+    addRadioButton(radioContainerY, "radioB", "myRadioButtonsY", "用電量");
+  
+    // 添加单选按钮 C，表示用水量
+    addRadioButton(radioContainerY, "radioC", "myRadioButtonsY", "用水量");
+  
+    // 添加单选按钮 D，表示一般廢棄物
+    addRadioButton(radioContainerY, "radioD", "myRadioButtonsY", "一般廢棄物");
+  
+    // 添加单选按钮 E，表示有害廢棄物
+    addRadioButton(radioContainerY, "radioE", "myRadioButtonsY", "有害廢棄物");
+  
+  
+    function addRadioButton(container, id, name, label) {
+      let radio = container.append("input")
+        .attr("type", "radio")
+        .attr("id", id)
+        .attr("name", name) // 设置相同的 name 属性
     
-  radioContainerY.append("label")
-    .attr("for", "radioA")
-    .text("碳排");
-
-  // 添加单选按钮 B，表示用電量
-  radioContainerY.append("input")
-    .attr("type", "radio")
-    .attr("id", "radioB")
-    .attr("name", "myRadioButtonsY"); // 设置相同的 name 属性
-  radioContainerY.append("label")
-    .attr("for", "radioB")
-    .text("用電量");
-
-  // 添加单选按钮 C，表示用水量
-  radioContainerY.append("input")
-    .attr("type", "radio")
-    .attr("id", "radioC")
-    .attr("name", "myRadioButtonsY"); // 设置相同的 name 属性
-  radioContainerY.append("label")
-    .attr("for", "radioC")
-    .text("用水量");
-
-  // 添加单选按钮 D，表示一般廢棄物
-  radioContainerY.append("input")
-    .attr("type", "radio")
-    .attr("id", "radioD")
-    .attr("name", "myRadioButtonsY"); // 设置相同的 name 属性
-  radioContainerY.append("label")
-    .attr("for", "radioD")
-    .text("一般廢棄物");
-
-  // 添加单选按钮 E，表示有害廢棄物
-  radioContainerY.append("input")
-    .attr("type", "radio")
-    .attr("id", "radioE")
-    .attr("name", "myRadioButtonsY"); // 设置相同的 name 属性
-  radioContainerY.append("label")
-    .attr("for", "radioE")
-    .text("有害廢棄物");
+      container.append("label")
+        .attr("for", id)
+        .text(label)
+        .style("margin-right", "5px"); // 设置标签与按钮之间的水平间距
+    }
+    
+    // 设置按钮之间的垂直间距
+    radioContainerX.selectAll("input")
+      .style("margin-bottom", "3px");
+    
+    radioContainerY.selectAll("input")
+      .style("margin-bottom", "3px");
 
   // 定义解析函数，用于处理 NaN 值
   const parseNA = string => (string === 'nan' ? '0' : string);
