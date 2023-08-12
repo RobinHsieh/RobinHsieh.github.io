@@ -1206,16 +1206,25 @@ progress {
     flex: 0 0 auto;
     width: auto;
   }
-  .col-md-1 {
+  .col-md-1-1 {
     flex: 0 0 auto;
-    /*
     width: 8.33333333%;
-    */
+  }
+  .col-md-1-2 {
+    flex: 0 0 auto;
     width: 12%;
   }
-  .col-md-2 {
+  .col-md-1-3 {
+    flex: 0 0 auto;
+    width: 15%;
+  }
+  .col-md-2-1 {
     flex: 0 0 auto;
     width: 16.66666667%;
+  }
+  .col-md-2-2 {
+    flex: 0 0 auto;
+    width: 18%;
   }
   .col-md-3 {
     flex: 0 0 auto;
@@ -1225,12 +1234,13 @@ progress {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
-  .col-md-5 {
+  .col-md-5-1 {
     flex: 0 0 auto;
-    /*
-    width: 41.66666667%;
-    */
     width: 38%;
+  }
+  .col-md-5-2 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
   }
   .col-md-6 {
     flex: 0 0 auto;
@@ -12257,11 +12267,12 @@ my style
 .pics img {
   position:absolute;
   /* 淡出淡入效果2秒 */
-  -webkit-transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  -o-transition: opacity 0.5s ease-in-out;
+  /* 供應商前綴 */
+  -webkit-transition: opacity 0.5s ease-in-out; /* 用於 Chrome, Safari, 新版本的 Opera 和其他基於 WebKit 或 Blink 的瀏覽器 */
+  -moz-transition: opacity 0.5s ease-in-out; /* 用於 Firefox */
+  -o-transition: opacity 0.5s ease-in-out; /* 用於舊版本的 Opera */
   transition: opacity 0.5s ease-in-out;
-  transition: all 0.8s ease-out; /*時間 特效*/
+  transition: all 0.8s ease-out; /* 時間 特效 */
   transform:scale(1,1);
  }
 
@@ -12270,6 +12281,57 @@ my style
     opacity:0;
   }
 
-  .pics:hover img {
-     transform:scale(1.05, 1.05);
-   }
+.pics:hover img {
+  transform:scale(1.05, 1.05);
+}
+
+.to-center {
+  height: 230px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-top: 4px solid #087990;
+  border-left: 4px solid #087990;
+  transform: rotate(-45deg) translate(0px, -10px);
+}
+
+.mt-4:hover .to-center .arrow {
+  animation: arrow-load 1.5s infinite;
+}
+
+.mt-4:hover .to-center .arrow:nth-child(1) {
+  left: 4px;
+  animation-delay: -0.4s;
+}
+
+.mt-4:hover .to-center .arrow:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.mt-4:hover .to-center .arrow:nth-child(3) {
+  right: 4px;
+}
+
+@keyframes arrow-load {
+  0% {
+    opacity: 0.3;
+    transform: rotate(-45deg) translate(20px, 10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+    transform: rotate(-45deg) translate(-15px, -25px);
+  }
+}
+
+
+
