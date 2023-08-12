@@ -12078,7 +12078,7 @@ textarea.form-control-lg {
   top: 1880px;
   left: 75px;
   border: 1px solid #ccc;
-  background-image: url('background.jpg');
+  background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
   background-size: 150px 100px;
   background-position: 35% 0%;
@@ -12087,7 +12087,7 @@ textarea.form-control-lg {
 
 .stackbar-chart-container {
   border: 1px solid #ccc;
-  background-image: url('background.jpg');
+  background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
   background-size: 150px 100px;
   background-position: 50% 0%;
