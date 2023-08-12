@@ -12250,3 +12250,26 @@ my style
   box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
 }
 
+.pics {
+  position:relative;
+}
+
+.pics img {
+  position:absolute;
+  /* 淡出淡入效果2秒 */
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  transition: all 0.8s ease-out; /*時間 特效*/
+  transform:scale(1,1);
+ }
+
+ .pics img:last-child:hover {
+   /* 滑入時第一張透明度設0 */
+    opacity:0;
+  }
+
+  .pics:hover img {
+     transform:scale(1.05, 1.05);
+   }
