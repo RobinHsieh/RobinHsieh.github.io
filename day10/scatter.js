@@ -15,7 +15,7 @@ export default function drawscatter(specificIndustry) {
   
     // 添加横轴标签
     bottomContainer.append("div")
-      .text("横轴")
+      .text("横軸")
       .style('position', 'relative')
       .style('font-size', "20px")
       .style('top', '-47px')
@@ -214,7 +214,7 @@ function drawplot(data, xkey, ykey, specificIndustry) {
     svg.append("text")
       .attr("x", xScale(xOffset)) // 在图表水平中心位置
       .attr("y", 20) // 在图表上方偏移 20 个单位
-      .text(`x 轴偏移量为+ ${Math.round(xOffset / 10000)} 万元`)
+      .text(`x 軸偏移量為+ ${Math.round(xOffset / 10000)} 萬元`)
       .attr("font-size", 12)
       .attr("fill", "black")
       .attr("text-anchor", "middle")

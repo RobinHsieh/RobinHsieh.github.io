@@ -12212,6 +12212,7 @@ my style
 .effect-zoom-in:hover img{
   opacity:.8; /*透明度*/
   transform:scale(1.2, 1.2); /*XY放大倍率*/
+  border: 0px solid #ccc;
 }
 
 .row .shift-left {
