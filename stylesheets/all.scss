@@ -5,9 +5,13 @@
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "./helpers/variables";
-
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-
+// 4. Include any optional Bootstrap components as you like
 @import "./components/header";
 @import "./components/utilities";
+@import "./components/customize";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/modal";
+
+

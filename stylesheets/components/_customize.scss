@@ -1,0 +1,448 @@
+@media (min-width: 768px) {
+    .col-md {
+      flex: 1 0 0%;
+    }
+    .row-cols-md-auto > * {
+      flex: 0 0 auto;
+      width: auto;
+    }
+    .row-cols-md-1 > * {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+    .row-cols-md-2 > * {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+    .row-cols-md-3 > * {
+      flex: 0 0 auto;
+      width: 33.3333333333%;
+    }
+    .row-cols-md-4 > * {
+      flex: 0 0 auto;
+      width: 25%;
+    }
+    .row-cols-md-5 > * {
+      flex: 0 0 auto;
+      width: 20%;
+    }
+    .row-cols-md-6 > * {
+      flex: 0 0 auto;
+      width: 16.6666666667%;
+    }
+    .col-md-auto {
+      flex: 0 0 auto;
+      width: auto;
+    }
+    .col-md-1-1 {
+      flex: 0 0 auto;
+      width: 8.33333333%;
+    }
+    .col-md-1-2 {
+      flex: 0 0 auto;
+      width: 12%;
+    }
+    .col-md-1-3 {
+      flex: 0 0 auto;
+      width: 15%;
+    }
+    .col-md-2-1 {
+      flex: 0 0 auto;
+      width: 16.66666667%;
+    }
+    .col-md-2-2 {
+      flex: 0 0 auto;
+      width: 17.8%;
+    }
+    .col-md-3 {
+      flex: 0 0 auto;
+      width: 25%;
+    }
+    .col-md-4 {
+      flex: 0 0 auto;
+      width: 33.33333333%;
+    }
+    .col-md-5-1 {
+      flex: 0 0 auto;
+      width: 38%;
+    }
+    .col-md-5-2 {
+      flex: 0 0 auto;
+      width: 41.66666667%;
+    }
+    .col-md-6 {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+    .col-md-7 {
+      flex: 0 0 auto;
+      width: 58.33333333%;
+    }
+    .col-md-8 {
+      flex: 0 0 auto;
+      width: 66.66666667%;
+    }
+    .col-md-9 {
+      flex: 0 0 auto;
+      width: 75%;
+    }
+    .col-md-10 {
+      flex: 0 0 auto;
+      width: 83.33333333%;
+    }
+    .col-md-11 {
+      flex: 0 0 auto;
+      width: 91.66666667%;
+    }
+    .col-md-12 {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+    .offset-md-0 {
+      margin-left: 0;
+    }
+    .offset-md-1 {
+      margin-left: 8.33333333%;
+    }
+    .offset-md-2 {
+      margin-left: 16.66666667%;
+    }
+    .offset-md-3 {
+      margin-left: 25%;
+    }
+    .offset-md-4 {
+      margin-left: 33.33333333%;
+    }
+    .offset-md-5 {
+      margin-left: 41.66666667%;
+    }
+    .offset-md-6 {
+      margin-left: 50%;
+    }
+    .offset-md-7 {
+      margin-left: 58.33333333%;
+    }
+    .offset-md-8 {
+      margin-left: 66.66666667%;
+    }
+    .offset-md-9 {
+      margin-left: 75%;
+    }
+    .offset-md-10 {
+      margin-left: 83.33333333%;
+    }
+    .offset-md-11 {
+      margin-left: 91.66666667%;
+    }
+    .g-md-0,
+    .gx-md-0 {
+      --bs-gutter-x: 0;
+    }
+    .g-md-0,
+    .gy-md-0 {
+      --bs-gutter-y: 0;
+    }
+    .g-md-1,
+    .gx-md-1 {
+      --bs-gutter-x: 0.25rem;
+    }
+    .g-md-1,
+    .gy-md-1 {
+      --bs-gutter-y: 0.25rem;
+    }
+    .g-md-2,
+    .gx-md-2 {
+      --bs-gutter-x: 0.5rem;
+    }
+    .g-md-2,
+    .gy-md-2 {
+      --bs-gutter-y: 0.5rem;
+    }
+    .g-md-3,
+    .gx-md-3 {
+      --bs-gutter-x: 1rem;
+    }
+    .g-md-3,
+    .gy-md-3 {
+      --bs-gutter-y: 1rem;
+    }
+    .g-md-4,
+    .gx-md-4 {
+      --bs-gutter-x: 1.5rem;
+    }
+    .g-md-4,
+    .gy-md-4 {
+      --bs-gutter-y: 1.5rem;
+    }
+    .g-md-5,
+    .gx-md-5 {
+      --bs-gutter-x: 4rem;
+    }
+    .g-md-5,
+    .gy-md-5 {
+      --bs-gutter-y: 4rem;
+    }
+}
+
+/*
+my style
+*/
+  
+  .custom-div {
+    width: 100%; /* 設定寬度等同於視窗寬度 */
+    height: 55vw; /* 設定高度為視窗寬度的0.6倍 */
+    /* 這裡可以添加更多樣式來美化這個新的元素 */
+  }
+  
+  .tree-chart-container {
+    position : absolute;
+    /*
+    top : 940px;
+    */
+    top: 1880px;
+    left: 75px;
+    border: 1px solid #ccc;
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 150px 100px;
+    background-position: 35% 0%;
+    background-color: rgba(255, 255, 255, 0.8); 
+  }
+  
+  .stackbar-chart-container {
+    border: 1px solid #ccc;
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 150px 100px;
+    background-position: 50% 0%;
+    background-color: rgba(255, 255, 255, 0.8); 
+  }
+  #cloudcontainer{
+    border: 5px solid #ccc;
+  } 
+  .controls{
+    position : absolute;
+    /*
+    top : 900px;
+    */
+    top : 1840px;
+    left: 75px;
+  }
+  .bottom-container{
+    position : absolute;
+    /*
+    top : 900px;
+    */
+    top : 1840px;
+    left: 75px;
+    z-index:2 ;
+  }
+  
+  .stackbar-chart-container{
+    position : absolute;
+    /*
+    top : 940px;
+    */
+    top : 1880px;
+    left: 0px;
+  }
+  
+  .select-container{
+    position : absolute;
+    /*
+    top : 900px;
+    */
+    top : 1840px;
+    left: 100px;
+  }
+    
+  #title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+  }
+  
+  #title2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+  }
+  
+  .h2-add-style {
+    color: #455191;
+    border-left: 8px solid #999;
+    padding: 8px 20px;
+    border-top: solid 2px #6cb4e4;
+    border-bottom: solid 2px #6cb4e4;
+    background: repeating-linear-gradient(-45deg,#f0f8ff,#f0f8ff 3px,#e9f4ff 3px,#e9f4ff 7px);
+  }
+  
+  .h4-add-sytle-2 {
+    color: #7c8798;
+    border-bottom: 5px solid #455191;
+    padding: 8px 20px;
+  }
+  
+  .h4-style-all-title {
+    margin-top: 45px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-bottom: 3px solid #d7d7d7;
+    border-left: 5px solid #7cc6e7;
+    background-color: #f9fafa;
+    box-shadow: 1px 1px 3px 0 #dfefff;
+    text-align: left;
+  }
+  
+  .p-add-style {
+    width: 85%;
+    margin: 13px auto;
+    padding: 13px;
+    border: 2px dashed #999;
+    border-radius: 10px;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  .button-fix-width {
+    width: 94px;
+  }
+  
+  .effect-zoom-in {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+  }
+  /*初始設定*/
+  .effect-zoom-in img {
+    display: block;
+    position: relative;
+    opacity:1;
+    transform:scale(1,1);
+    transition: all 1s ease-out; /*時間 特效*/
+  }
+  /*滑鼠移入特效*/
+  .effect-zoom-in:hover img{
+    opacity:.8; /*透明度*/
+    transform:scale(1.2, 1.2); /*XY放大倍率*/
+    border: 0px solid #ccc;
+  }
+  
+  .row .shift-left {
+    transform:translate(10px);
+    transition:transform .5s;
+  }
+  
+  .row:hover .shift-left {
+    transform:translate(0px)
+  }
+  
+  .row .shift-right {
+    transform:translate(-10px);
+    transition:transform .5s;
+  }
+  
+  .row:hover .shift-right {
+    transform:translate(0px)
+  }
+  
+  .kokuban-s2 {
+    position: relative;
+    padding: 1em;
+    background: #006633;
+    color: #fff;
+    border: 8px solid #b2771f;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
+  }
+  
+  .picture-frame {
+    position: relative;
+    border: 8px solid #b6d4fe;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
+  }
+  
+  .pics {
+    position:relative;
+  }
+  
+  .pics img {
+    position:absolute;
+    /* 淡出淡入效果2秒 */
+    /* 供應商前綴 */
+    -webkit-transition: opacity 0.5s ease-in-out; /* 用於 Chrome, Safari, 新版本的 Opera 和其他基於 WebKit 或 Blink 的瀏覽器 */
+    -moz-transition: opacity 0.5s ease-in-out; /* 用於 Firefox */
+    -o-transition: opacity 0.5s ease-in-out; /* 用於舊版本的 Opera */
+    transition: opacity 0.5s ease-in-out;
+    transition: all 0.8s ease-out; /* 時間 特效 */
+    transform:scale(1,1);
+   }
+  
+   .pics img:last-child:hover {
+     /* 滑入時第一張透明度設0 */
+      opacity:0;
+    }
+  
+  .pics:hover img {
+    transform:scale(1.05, 1.05);
+  }
+  
+  .to-center {
+    height: 230px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-top: 4px solid #087990;
+    border-left: 4px solid #087990;
+    transform: rotate(-45deg) translate(0px, -10px);
+  }
+  
+  .mt-4:hover .to-center .arrow {
+    animation: arrow-load 1.5s infinite;
+  }
+  
+  .mt-4:hover .to-center .arrow:nth-child(1) {
+    left: 4px;
+    animation-delay: -0.4s;
+  }
+  
+  .mt-4:hover .to-center .arrow:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  
+  .mt-4:hover .to-center .arrow:nth-child(3) {
+    right: 4px;
+  }
+  
+  @keyframes arrow-load {
+    0% {
+      opacity: 0.3;
+      transform: rotate(-45deg) translate(20px, 10px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.3;
+      transform: rotate(-45deg) translate(-15px, -25px);
+    }
+  }
+  
+  
+  
+  

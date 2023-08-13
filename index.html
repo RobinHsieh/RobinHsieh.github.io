@@ -7,14 +7,20 @@
   <title>ESG綠金運籌師</title>
   <link rel="stylesheet" href="./stylesheets/all.css">
   <link rel="icon" href="images/websiteLogo1.ico" type="image/x-icon">
+  <!-- Bootstrap CSS -->
+  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">-->
 </head>
 <body>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
   <script src="//unpkg.com/d3"></script>
   <script src="day10/main.js" type="module"></script> 
   <script src="day10/stackbar.js" type="module"></script>
   <script src="day10/scatter.js" type="module"></script>
   <script src="day10/word_cloud.js" type="module"></script>
+
+
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">ESG 綠金運籌師</a>
@@ -30,12 +36,14 @@
             <a class="nav-link" href="https://www.wantgoo.com/">股市表現</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">常見問題/指引</a>
+            <button class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModalLive">常見問題/指引</button>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
+
   <header class="header" style="background-image: url('./images/Background.png');">
     <div class="container d-flex">
       <div>
@@ -393,6 +401,7 @@
 
   </section>
 
+
   <section class="container mt-5">
 
     <div class="row mt-4">
@@ -564,35 +573,32 @@
 
   </section>
 
-  <section>
 
+  <section>
     <!-- Modal -->
     <div class="modal fade" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" style="display: none;" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLiveLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLiveLabel">您可能遇到的問題</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            <p>
-              Woohoo, you're reading this text in a modal!
-            </p>
+          <div class="modal-body row">
+            <h6>下列文件可供您參考，希望能夠解決到您的問題</h4>
+            <a href="./images/何謂ESG.pdf"">何謂ESG</a>
+            <a href="./images/各指數分級解釋.pdf"">各指數分級解釋</a>
+            <a href="./images/視覺化說明文件.pdf"">視覺化說明文件</a>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
           </div>
         </div>
       </div>
     </div>
-    <!-- Button trigger modal -->
-    <div>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLive">
-        Launch demo modal
-      </button>
-    </div>
   </section>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>
