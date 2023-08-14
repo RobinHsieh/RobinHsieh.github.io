@@ -59,7 +59,7 @@ function drawcloud(xPos,yPos,words,company){
   // 增加副標題
   
   let modalSubTitle = document.getElementById("informationModalSubLabel");
-  modalSubTitle.innerHTML = "CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MSCI ESG rating: " + msci;
+  modalSubTitle.innerHTML = "CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MSCI ESG rating: " + msci;
  /*
   container.append("div")
   .attr("id", "subtitle")
@@ -157,10 +157,10 @@ function createWordCloud(words, color, xPos, yPos, width, height) {
 }
 
 // Usage example for draw1 and draw2
-createWordCloud(words.map(function(d) { return { text: d.E達成, size: d.重要度+2}; }), "#00A86B",615, 415,480,250);
-createWordCloud(words.map(function(d) { return { text: d.E目標, size: d.重要度+2 }; }), "#9966CB", -10, 200,480,200);
-createWordCloud(words.map(function(d) { return { text: d.風險, size: d.重要度+2 }; }), "#FFA600", 620, 105,470,150);
-createWordCloud(words.map(function(d) { return { text: d.實體風險, size: d.重要度+2 }; }), "red", 450, 5,480,100);
+createWordCloud(words.map(function(d) { return { text: d.E達成, size: d.重要度+2}; }), "#00A86B",615, 415,470,250);
+createWordCloud(words.map(function(d) { return { text: d.E目標, size: d.重要度+2 }; }), "#9966CB", -10, 200,470,200);
+createWordCloud(words.map(function(d) { return { text: d.風險, size: d.重要度+2 }; }), "#FFA600", 620, 105,465,150);
+createWordCloud(words.map(function(d) { return { text: d.實體風險, size: d.重要度+2 }; }), "red", 450, 5,470,100);
 
 // 设置弧度路径的半径
 const radius = 125;
