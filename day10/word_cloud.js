@@ -53,23 +53,20 @@ function drawcloud(xPos,yPos,words,company){
 
 
   // 增加標題
-  container.append("div")
-  .attr("id", "title")
-  .style("text-align", "center")
-  .style("font-size", "32px")
-  .style("font-weight", "bold")
-
   let modalTitle = document.getElementById("informationModalLabel");
+  modalTitle.textContent = company + " 風險、目標與成果彙整報告";  // 設置元素的內容
 
-  // 設置元素的內容
-  modalTitle.textContent = company + " 風險、目標與成果彙整報告";
-
-  // 副標題
+  // 增加副標題
+  /*
+  let modalSubTitle = document.getElementById("informationModalSubLabel");
+  modalSubTitle.textContent = "CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti+"&nbsp;&nbsp;&nbsp;MSCI ESG rating: "+msci;  // 設置元素的內容
+  */
   container.append("div")
   .attr("id", "subtitle")
   .style("text-align", "center")
   .style("font-size", "24px")
   .html("CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti+"&nbsp;&nbsp;&nbsp;MSCI ESG rating: "+msci);
+  
 
   // 在 <div> 元素中創建一個 SVG 元素
   const svg = container.append("svg")
@@ -213,3 +210,11 @@ arcs.append("text")
     .attr("fill", 'black')
     .style("font-size", "16px");
 }
+
+function killDetailInformation(){
+  d3.selectAll('.modal-body > div').remove();
+}
+
+document.getElementById('informationModal').addEventListener('hidden.bs.modal', function (event) {
+  killDetailInformation()
+});
