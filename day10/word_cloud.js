@@ -33,7 +33,7 @@ function drawcloud(xPos,yPos,words,company){
   // 觸發視窗
   informationModal.show();
     
-  const chart_margin = { top: 40, right: 40, bottom: 40, left: 40 }; // 设置图表的边距，包含上、右、下、左四个方向的边距值
+  const chart_margin = { top: 40, right: 70, bottom: 40, left: 70 }; // 设置图表的边距，包含上、右、下、左四个方向的边距值
   const chart_width = windowWidth - (chart_margin.left + chart_margin.right); // 计算图表的宽度，即画布宽度减去左右边距
   const chart_height = windowHeight - (chart_margin.top + chart_margin.bottom); // 计算图表的高度，即画布高度减去上下边距
   
@@ -57,16 +57,16 @@ function drawcloud(xPos,yPos,words,company){
   modalTitle.textContent = company + " 風險、目標與成果彙整報告";  // 設置元素的內容
 
   // 增加副標題
-  /*
+  
   let modalSubTitle = document.getElementById("informationModalSubLabel");
-  modalSubTitle.textContent = "CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti+"&nbsp;&nbsp;&nbsp;MSCI ESG rating: "+msci;  // 設置元素的內容
-  */
+  modalSubTitle.innerHTML = "CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti + "&nbsp;&nbsp;&nbsp;MSCI ESG rating: " + msci;
+ /*
   container.append("div")
   .attr("id", "subtitle")
   .style("text-align", "center")
-  .style("font-size", "24px")
+  .style("font-size", "22px")
   .html("CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti+"&nbsp;&nbsp;&nbsp;MSCI ESG rating: "+msci);
-  
+  */
 
   // 在 <div> 元素中創建一個 SVG 元素
   const svg = container.append("svg")
