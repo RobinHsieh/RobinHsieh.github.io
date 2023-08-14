@@ -59,7 +59,7 @@ function drawcloud(xPos,yPos,words,company){
   // 增加副標題
   
   let modalSubTitle = document.getElementById("informationModalSubLabel");
-  modalSubTitle.innerHTML = "CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti + "&nbsp;&nbsp;&nbsp;MSCI ESG rating: " + msci;
+  modalSubTitle.innerHTML = "CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MSCI ESG rating: " + msci;
  /*
   container.append("div")
   .attr("id", "subtitle")
