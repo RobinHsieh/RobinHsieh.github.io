@@ -12209,7 +12209,6 @@ my style
   */
   top: 60px;
   border: 1px solid #ccc;
-  background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-size: 150px 100px;
   background-position: 35% 0%;
@@ -12218,7 +12217,6 @@ my style
 
 .stackbar-chart-container {
   border: 1px solid #ccc;
-  background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-size: 150px 100px;
   background-position: 50% 0%;
