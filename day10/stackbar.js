@@ -3,8 +3,8 @@ import drawscatter from './scatter.js';
 
 export default function barpage(specificIndustry) {
   // 创建底部容器
-  let bottomContainer = d3.select("body")
-    .append("div") // 在 body 元素中添加一个 div 元素
+  let bottomContainer = d3.select(".custom-div")
+    .append("div") // 在 .custom-div 類別中添加一个 div 元素
     .attr("class", "bottom-container"); // 添加类名为 "bottom-container"
 
   // 添加上一頁按鈕
@@ -46,7 +46,9 @@ export default function barpage(specificIndustry) {
 
 
   // 创建堆叠条形图容器
-  let barChartContainer = d3.select("body")
+  let customDiv = d3.select(".custom-div"); // 首先選擇 .custom-div
+  
+  let barChartContainer = customDiv
     .append("div") // 在 body 元素中添加一个 div 元素
     .attr("class", "stackbar-chart-container"); // 添加类名为 "stackbar-chart-container"
 
@@ -390,6 +392,7 @@ function draw_stackbar(res, title,target) {
 function back(){
   d3.selectAll("#bottom-button").remove() // 移除页面中所有 id 为 "bottom-button" 的元素
   d3.selectAll(".stackbar-chart-container").remove() // 移除页面中所有 class 为 "stackbar-chart-container" 的元素
-  d3.selectAll(".bottom-container").remove() 
+  d3.selectAll(".bottom-container").remove()
+  d3.selectAll(".select-container").remove()
   homepage() // 调用 homepage 函数，返回主页
 }

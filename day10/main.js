@@ -4,13 +4,16 @@ export default function homepage(){
   killall()
 
   // 創建 controls 元素
-  var controlsContainer = d3.select("body")
+  var customDiv = d3.select(".custom-div"); // 首先選擇 .custom-div 元素
+
+  var controlsContainer = customDiv
   .append("div")
   .attr("class", "controls");
   
-  var barChartContainer = d3.select("body")
+  var barChartContainer = customDiv
   .append("div")
   .attr("class", "tree-chart-container");
+
 
   // 創建 select 元素
   var selectElement = controlsContainer.append("select")

@@ -189,18 +189,24 @@ my style
 */
   
   .custom-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%; /* 設定寬度等同於視窗寬度 */
-    height: 55vw; /* 設定高度為視窗寬度的0.6倍 */
+    // height: 55vw; /* 設定高度為視窗寬度的0.6倍 */
+    height: 750px;
     /* 這裡可以添加更多樣式來美化這個新的元素 */
   }
   
   .tree-chart-container {
-    position : absolute;
+    position: absolute;
     /*
     top : 940px;
     */
-    top: 1880px;
-    left: 75px;
+    // top: 1880px;
+    top: 60px;
+    // left: 75px;
     border: 1px solid #ccc;
     background-image: url('../images/background.jpg');
     background-repeat: no-repeat;
@@ -225,7 +231,8 @@ my style
     /*
     top : 900px;
     */
-    top : 1840px;
+    top: 20px;
+    // top : 1840px;
     left: 75px;
   }
   .bottom-container{
@@ -233,7 +240,8 @@ my style
     /*
     top : 900px;
     */
-    top : 1840px;
+    top: 60px;
+    // top : 1840px;
     left: 75px;
     z-index:2 ;
   }
@@ -243,8 +251,9 @@ my style
     /*
     top : 940px;
     */
-    top : 1880px;
-    left: 0px;
+    top: 120px;
+    // top : 1880px;
+    // left: 0px;
   }
   
   .select-container{
@@ -252,7 +261,8 @@ my style
     /*
     top : 900px;
     */
-    top : 1840px;
+    top: 60px;
+    // top : 1840px;
     left: 100px;
   }
     

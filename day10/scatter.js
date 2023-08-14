@@ -2,9 +2,12 @@ import word_cloud from './word_cloud.js';
 
 export default function drawscatter(specificIndustry) {
     // 创建单选按钮容器  
-    let bottomContainer = d3.select("body")
-      .append("div") // 在 body 元素中添加一个 div 元素
+    let customDiv = d3.select(".custom-div"); // 首先選擇 .custom-div
+
+    let bottomContainer = customDiv
+      .append("div") // 在 .custom-div 元素中添加一个 div 元素
       .attr("class", "select-container");
+
   
     // 创建横轴单选按钮容器
     let radioContainerX = bottomContainer.append("div")
@@ -174,7 +177,7 @@ function setupscatter(data, specificIndustry) {
 function drawplot(data, xkey, ykey, specificIndustry) {
   d3.selectAll('#scatter').remove(); // 清除旧图
   
-  let scatterContainer = d3.select("body > div.stackbar-chart-container");
+  let scatterContainer = d3.select(".custom-div > div.stackbar-chart-container");
   const width = window.innerWidth * 0.39; // 设置画布宽度为一半
   const height = window.innerWidth * 0.39; // 设置画布高度为 600 像素
   const chart_margin = { top: 40, right: 40, bottom: 40, left: 40 }; // 设置图表的边距，包含上、右、下、左四个方向的边距值
