@@ -33,7 +33,7 @@ function drawcloud(xPos,yPos,words,company){
   // 觸發視窗
   informationModal.show();
     
-  const chart_margin = { top: 40, right: 70, bottom: 40, left: 70 }; // 设置图表的边距，包含上、右、下、左四个方向的边距值
+  const chart_margin = { top: 40, right: 90, bottom: 40, left: 90 }; // 设置图表的边距，包含上、右、下、左四个方向的边距值
   const chart_width = windowWidth - (chart_margin.left + chart_margin.right); // 计算图表的宽度，即画布宽度减去左右边距
   const chart_height = windowHeight - (chart_margin.top + chart_margin.bottom); // 计算图表的高度，即画布高度减去上下边距
   
@@ -73,9 +73,9 @@ function drawcloud(xPos,yPos,words,company){
   .attr("width", chart_width)
   .attr("height", chart_height)
   .style("background-image", "url(https://imgur.com/HJB0fD6.png)")
-  .style("background-size", "800px 800px")
+  .style("background-size", "750px 750px")
   .style("background-repeat","no-repeat")
-  .style("background-position", "60% 60%");
+  .style("background-position", "70% 60%");
 
   // 在 SVG 中創建矩形元素
   const rectangle = svg.append("rect")
@@ -92,28 +92,28 @@ svg.append("image")
 .attr("href", "https://imgur.com/44DGITP.jpg")
 .attr("width", 50)
 .attr("height", 50)
-.attr("x", 620)
-.attr("y", 220);
+.attr("x", 600)
+.attr("y", 240);
 
 // 目標插圖
 svg.append("image")
 .attr("href", "https://imgur.com/yN4Hftj.jpg")
 .attr("width",50)
 .attr("height", 50)
-.attr("x", 500)
-.attr("y", 280);
+.attr("x", 490)
+.attr("y", 295);
 
 // 策略插圖
 svg.append("image")
 .attr("href", "https://imgur.com/jJ3c2Be.jpg")
 .attr("width",50)
 .attr("height", 50)
-.attr("x", 630)
-.attr("y", 340);
+.attr("x", 610)
+.attr("y", 350);
 
 // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
 // Wordcloud features that are different from one word to the other must be here   
-function createWordCloud(words, color, xPos, yPos,width,height) {
+function createWordCloud(words, color, xPos, yPos, width, height) {
   let layout = d3.layout.cloud()
     .size([width, height])
     .words(words.map(function(d) { return { text: d.text, size: d.size }; }))
@@ -157,10 +157,10 @@ function createWordCloud(words, color, xPos, yPos,width,height) {
 }
 
 // Usage example for draw1 and draw2
-createWordCloud(words.map(function(d) { return { text: d.E達成, size: d.重要度+2}; }), "#00A86B",680, 410,480,250);
-createWordCloud(words.map(function(d) { return { text: d.E目標, size: d.重要度+2 }; }), "#9966CB", 0, 200,480,250);
-createWordCloud(words.map(function(d) { return { text: d.風險, size: d.重要度+2 }; }), "#FFA600", 680, 105,480,150);
-createWordCloud(words.map(function(d) { return { text: d.實體風險, size: d.重要度+2 }; }), "red", 680, 5,480,100);
+createWordCloud(words.map(function(d) { return { text: d.E達成, size: d.重要度+2}; }), "#00A86B",615, 410,480,250);
+createWordCloud(words.map(function(d) { return { text: d.E目標, size: d.重要度+2 }; }), "#9966CB", -10, 200,480,200);
+createWordCloud(words.map(function(d) { return { text: d.風險, size: d.重要度+2 }; }), "#FFA600", 620, 105,480,150);
+createWordCloud(words.map(function(d) { return { text: d.實體風險, size: d.重要度+2 }; }), "red", 450, 5,480,100);
 
 // 设置弧度路径的半径
 const radius = 125;
@@ -182,7 +182,8 @@ const arcs = svg.selectAll("g.arc")
     .enter()
     .append("g")
     .attr("class", "arc")
-    .attr("transform", "translate(598,313)");
+    .attr("transform", "translate(581,327)");
+    // .attr("transform", "translate(598,313)");
 
 // 在弧度路径上添加弧
 // arcs.append("path")
@@ -203,7 +204,7 @@ arcs.append("text")
         // 將文字向上移動一些，使其與弧線彎曲
         // const yOffset = Math.cos(angleInRadians);;
         // 將文字進行旋轉，使其與弧線一致
-        return `translate(${pos[0]*1.1}, ${pos[1]*1.1}) rotate(${angle * (180 / Math.PI)})`;
+        return `translate(${pos[0]*0.96}, ${pos[1]*0.96}) rotate(${angle * (180 / Math.PI)})`;
     })
     .attr("text-anchor", "middle")
     .text(function(d, i) { return label[i]; }) // 使用 label 陣列來取得標籤文字
