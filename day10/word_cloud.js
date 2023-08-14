@@ -29,47 +29,56 @@ function drawcloud(xPos,yPos,words,company){
   const windowLeft = window.screenX + xPos;
   const windowTop = window.screenY + yPos;
   // 在指定尺寸和位置創建新視窗
-  const newWindow = window.open("", "_blank", `width=${windowWidth}, height=${windowHeight}, left=${windowLeft}, top=${windowTop}`);
-  
+  var informationModal = new bootstrap.Modal(document.getElementById('informationModal'));
+  // 觸發視窗
+  informationModal.show();
+    
   const chart_margin = { top: 40, right: 40, bottom: 40, left: 40 }; // 设置图表的边距，包含上、右、下、左四个方向的边距值
   const chart_width = windowWidth - (chart_margin.left + chart_margin.right); // 计算图表的宽度，即画布宽度减去左右边距
   const chart_height = windowHeight - (chart_margin.top + chart_margin.bottom); // 计算图表的高度，即画布高度减去上下边距
   
+  /*
   // 在新視窗的 head 元素中引入外部 CSS 檔案
   const link = newWindow.document.createElement("link");
   link.rel = "stylesheet";
   link.href = "./stylesheets/helpers/all.css"; // 請替換為你的本地 CSS 檔案的路徑
   newWindow.document.head.appendChild(link);
+  */
   // 在新視窗內創建一個 <div> 元素，並設置其寬度和高度
-  const container = d3.select(newWindow.document.body)
+  const container = d3.select(document.getElementById('informationModal').querySelector('.modal-body'))
   .append("div")
   .attr("id", "cloudcontainer")
   .style("width", chart_width + "px")
-  .style("height", chart_height + "px")
+  .style("height", chart_height + "px");
 
-   // 增加標題
-   container.append("div")
-   .attr("id", "title")
-   .style("text-align", "center")
-   .style("font-size", "32px")
-   .style("font-weight", "bold")
-   .text(company+" 風險、目標與成果彙整報告"); // 請替換成你想要的標題文字
- 
-   // 副標題
-   container.append("div")
-     .attr("id", "subtitle")
-     .style("text-align", "center")
-     .style("font-size", "24px")
-     .html("CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti+"&nbsp;&nbsp;&nbsp;MSCI ESG rating: "+msci);
 
-// 在 <div> 元素中創建一個 SVG 元素
+  // 增加標題
+  container.append("div")
+  .attr("id", "title")
+  .style("text-align", "center")
+  .style("font-size", "32px")
+  .style("font-weight", "bold")
+
+  let modalTitle = document.getElementById("informationModalLabel");
+
+  // 設置元素的內容
+  modalTitle.textContent = company + " 風險、目標與成果彙整報告";
+
+  // 副標題
+  container.append("div")
+  .attr("id", "subtitle")
+  .style("text-align", "center")
+  .style("font-size", "24px")
+  .html("CDP climate change grade: " + cdp + "&nbsp;&nbsp;&nbsp;SBTI target classification: " + sbti+"&nbsp;&nbsp;&nbsp;MSCI ESG rating: "+msci);
+
+  // 在 <div> 元素中創建一個 SVG 元素
   const svg = container.append("svg")
-    .attr("width", chart_width)
-    .attr("height", chart_height)
-    .style("background-image", "url(https://imgur.com/HJB0fD6.png)")
-    .style("background-size", "800px 800px")
-    .style("background-repeat","no-repeat")
-    .style("background-position", "60% 60%");
+  .attr("width", chart_width)
+  .attr("height", chart_height)
+  .style("background-image", "url(https://imgur.com/HJB0fD6.png)")
+  .style("background-size", "800px 800px")
+  .style("background-repeat","no-repeat")
+  .style("background-position", "60% 60%");
 
   // 在 SVG 中創建矩形元素
   const rectangle = svg.append("rect")
