@@ -17,8 +17,8 @@ export default function homepage(){
 
   // 創建 select 元素
   var selectElement = controlsContainer.append("select")
-  .attr("id", "dropdown").style('top', '10px') // 设置 option 元素的顶部定位样式为 50px
-  .style('left', "50px") // 设置 option 元素的左边定位样式为 50px
+  .attr("id", "dropdown").style('top', '10px') // 設置 option 元素的頂部定位樣式為 50px
+  .style('left', "50px") // 設置 option 元素的左邊定位樣式為 50px
   // .style('background-color','yellowgreen')
   .style('position', 'static')
   .style('font-size',"16px");
@@ -173,7 +173,7 @@ function draw(res, keywords) {
       .range([.5,1]); // 指定對應的不透明度範圍
   
   var lastClickTime = 0;
-  var delay = 300; // 设置双击间隔时间，单位为毫秒
+  var delay = 300; // 設置雙擊間隔时間，單位為毫秒
   
   let parentNodes = root.descendants().filter(function(d) { return d.depth === 1; });//treemap 母類別名稱
                       

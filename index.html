@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,28 +11,33 @@
   <!-- Bootstrap CSS -->
   <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">-->
 </head>
+
 <body>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
   <script src="//unpkg.com/d3"></script>
-  <script src="day10/main.js" type="module"></script> 
+  <script src="day10/main.js" type="module"></script>
   <script src="day10/stackbar.js" type="module"></script>
   <script src="day10/scatter.js" type="module"></script>
   <script src="day10/word_cloud.js" type="module"></script>
   <!--<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
 
 
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">ESG 綠金運籌師</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="btn btn-primary btn-lg" style="--bs-btn-padding-y: .07rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 1rem">
+          <li class="btn btn-primary btn-lg"
+            style="--bs-btn-padding-y: .07rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 1rem">
             <a class="nav-link active" aria-current="page" href="#">首頁</a>
           </li>
           <li class="nav-item">
@@ -51,7 +57,7 @@
       <div>
         <h1 id="title">ESG綠金運籌師</h1>
         <h5 id="title2">我們為您提供各產業完整的ESG及股市的相關資訊</h5>
-    </div>
+      </div>
   </header>
 
 
@@ -94,7 +100,7 @@
         padding-right: 1px;
         border-radius: 5px;
         border: 2px solid #4b85d5;">
-            各指數分級解釋
+          各指數分級解釋
         </p>
       </div>
     </div>
@@ -128,7 +134,7 @@
         padding-right: 1px;
         border-radius: 5px;
         border: 2px solid #4b85d5;">
-            視覺化說明文件
+          視覺化說明文件
         </p>
       </div>
     </div>
@@ -163,7 +169,7 @@
         padding-right: 1px;
         border-radius: 5px;
         border: 2px solid #03414d">
-            原始csv數據下載
+          原始csv數據下載
         </p>
       </div>
     </div>
@@ -179,7 +185,7 @@
 
   <div class="custom-div">
     <div class="tree-chart-container">
-      
+
     </div>
   </div>
 
@@ -200,7 +206,8 @@
     </div>
     <div class="row mt-3">
       <div class="col-md-1-2" style="margin-left: 3.5em;">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.wpgholdings.com/csr_area/info/zhtw/2051">大聯大</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.wpgholdings.com/csr_area/info/zhtw/2051">大聯大</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://esg.wtmec.com/">文曄</a>
@@ -220,13 +227,15 @@
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.chiconypower.com/zh-tw/home/CSR">群光</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.foxlink.com/%E4%BC%81%E6%A5%AD%E7%A4%BE%E6%9C%83%E8%B2%AC%E4%BB%BB">正崴</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.foxlink.com/%E4%BC%81%E6%A5%AD%E7%A4%BE%E6%9C%83%E8%B2%AC%E4%BB%BB">正崴</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.honhai.com/zh-tw/CSR">鴻海</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.kinpo.com.tw/zh-TW/sustainability/">金寶</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.kinpo.com.tw/zh-TW/sustainability/">金寶</a>
       </div>
     </div>
 
@@ -237,16 +246,19 @@
     </div>
     <div class="row mt-3">
       <div class="col-md-1-2" style="margin-left: 3.5em;">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://esg.tsmc.com/ch/ESG/valueCreation.html">台積電</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://esg.tsmc.com/ch/ESG/valueCreation.html">台積電</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.aseglobal.com/ch/csr">日月光</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://corp.mediatek.tw/about/sustainability">聯發科</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://corp.mediatek.tw/about/sustainability">聯發科</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.umc.com/zh-TW/CSR/sustainability_overview">聯電</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.umc.com/zh-TW/CSR/sustainability_overview">聯電</a>
       </div>
     </div>
 
@@ -257,10 +269,12 @@
     </div>
     <div class="row mt-3">
       <div class="col-md-1-2" style="margin-left: 3.5em;">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.pegatroncorp.com/csr/view/id/5/lang/zh_TW">和碩</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.pegatroncorp.com/csr/view/id/5/lang/zh_TW">和碩</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.quantatw.com/Quanta/chinese/esg/esg.aspx">廣達</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.quantatw.com/Quanta/chinese/esg/esg.aspx">廣達</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://esg.wistron.com/ch/sustainability">緯創</a>
@@ -277,7 +291,8 @@
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.acer-group.com/sustainability/zh">宏碁</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.liteon.com/zh-tw/globalcitizenship/94">光寶科</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.liteon.com/zh-tw/globalcitizenship/94">光寶科</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.compal.com/csr/zh/page.aspx?Id=2#">仁寶</a>
@@ -300,7 +315,8 @@
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.cst.com.tw/csr.php">正新</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://csr.fenc.com/index_focus.aspx?lang=zh">遠東新</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://csr.fenc.com/index_focus.aspx?lang=zh">遠東新</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://csr.yfy.com/report">永豐餘</a>
@@ -320,13 +336,15 @@
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://pressroom.hotaimotor.com.tw/csr">和泰車</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.yulon-motor.com.tw/responsibility.aspx">裕隆</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.yulon-motor.com.tw/responsibility.aspx">裕隆</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.taiwancement.com/tw/esgIndex.html">台泥</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.csc.com.tw/csc/hr/csr/sus/sus2.htm">中鋼</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.csc.com.tw/csc/hr/csr/sus/sus2.htm">中鋼</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.farglory-land.com.tw/esg/">遠雄</a>
@@ -337,7 +355,8 @@
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://csr.auo.com/tw">友達</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.ledtech.com.tw/environmental-protection-and-energy-saving-cn/">華興</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.ledtech.com.tw/environmental-protection-and-energy-saving-cn/">華興</a>
       </div>
     </div>
 
@@ -348,10 +367,12 @@
     </div>
     <div class="row mt-3">
       <div class="col-md-1-2" style="margin-left: 3.5em;">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.fubon.com/financialholdings/citizenship/esg_visioning/esg_visioning.html">富邦金</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.fubon.com/financialholdings/citizenship/esg_visioning/esg_visioning.html">富邦金</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.cathaybk.com.tw/cathaybk/csr/index.html">國泰金</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.cathaybk.com.tw/cathaybk/csr/index.html">國泰金</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.cdfholding.com/zh-tw/esg">開發金</a>
@@ -365,7 +386,8 @@
     </div>
     <div class="row mt-3">
       <div class="col-md-1-2" style="margin-left: 3.5em;">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.ctbcbank.com/content/dam/twrbo/ESG/index.html">中信金</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.ctbcbank.com/content/dam/twrbo/ESG/index.html">中信金</a>
       </div>
     </div>
 
@@ -376,13 +398,15 @@
     </div>
     <div class="row mt-3">
       <div class="col-md-1-2" style="margin-left: 3.5em;">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.cht.com.tw/zh-tw/home/cht/esg/sustainable-governance/sustainable-development-vision">中華電</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.cht.com.tw/zh-tw/home/cht/esg/sustainable-governance/sustainable-development-vision">中華電</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.rt-develop.com.tw/tw/CSR">潤泰全</a>
       </div>
       <div class="col-md-1-2">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://www.mercuries.com.tw/responsibility-85-page95">三商</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://www.mercuries.com.tw/responsibility-85-page95">三商</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://esg.sp88.tw/index.php">統一</a>
@@ -393,7 +417,8 @@
     </div>
     <div class="row mt-3">
       <div class="col-md-1-2" style="margin-left: 3.5em;">
-        <a class="btn btn-secondary btn-lg button-fix-width" href="https://csr.evergreen-marine.com/csr/tw/jsp/CSR_Index.jsp">長榮</a>
+        <a class="btn btn-secondary btn-lg button-fix-width"
+          href="https://csr.evergreen-marine.com/csr/tw/jsp/CSR_Index.jsp">長榮</a>
       </div>
       <div class="col-md-1-2">
         <a class="btn btn-secondary btn-lg button-fix-width" href="https://calec.china-airlines.com/csr/">華航</a>
@@ -569,7 +594,7 @@
     <div class="row mt-5">
       <h2 class="h2-add-style">聯絡方式</h2>
       <p>
-        [ 負責人 ]  蔡秉翰<br>
+        [ 負責人 ] 蔡秉翰<br>
         [ 電子郵件 ] pinhan0823@g.ncu.edu.tw<br>
         [ 電話號碼 ] 0970743066
       </p>
@@ -580,7 +605,8 @@
 
   <section>
     <!-- Modal for Qustion -->
-    <div class="modal fade" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" style="display: none;" aria-hidden="true">
+    <div class="modal fade" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel"
+      style="display: none;" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -589,18 +615,19 @@
           </div>
           <div class="modal-body row">
             <h6>下列文件可供您參考，希望能夠解決到您的問題</h4>
-            <a href="./images/何謂ESG.pdf"">何謂ESG</a>
-            <a href="./images/各指數分級解釋.pdf"">各指數分級解釋</a>
-            <a href="./images/視覺化說明文件.pdf"">視覺化說明文件</a>
+              <a href="./images/何謂ESG.pdf"">何謂ESG</a>
+            <a href=" ./images/各指數分級解釋.pdf"">各指數分級解釋</a>
+              <a href="./images/視覺化說明文件.pdf"">視覺化說明文件</a>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+          <div class=" modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
           </div>
         </div>
       </div>
     </div>
     <!-- Modal for Detail Information -->
-    <div class="modal fade" id="informationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="informationModalLabel" aria-hidden="true">
+    <div class="modal fade" id="informationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="informationModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
         <div class="modal-content">
           <div class="modal-header">
@@ -617,4 +644,5 @@
 
 
 </body>
+
 </html>

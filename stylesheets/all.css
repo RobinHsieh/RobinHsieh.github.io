@@ -12197,16 +12197,18 @@ my style
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%; /* 設定寬度等同於視窗寬度 */
-  height: 52vw; /* 設定高度為視窗寬度的0.6倍 */
+  width: 100%;
+  /* 設定寬度等同於視窗寬度 */
+  height: 52vw;
+  /* 設定高度為視窗寬度的0.6倍 */
   /* 這裡可以添加更多樣式來美化這個新的元素 */
 }
 
 .tree-chart-container {
   position: absolute;
   /*
-  top : 940px;
-  */
+    top : 940px;
+    */
   top: 60px;
   border: 1px solid #ccc;
   background-repeat: no-repeat;
@@ -12230,8 +12232,8 @@ my style
 .controls {
   position: absolute;
   /*
-  top : 900px;
-  */
+    top : 900px;
+    */
   top: 20px;
   left: 75px;
 }
@@ -12239,8 +12241,8 @@ my style
 .bottom-container {
   position: absolute;
   /*
-  top : 900px;
-  */
+    top : 900px;
+    */
   top: 60px;
   left: 75px;
   z-index: 2;
@@ -12249,16 +12251,16 @@ my style
 .stackbar-chart-container {
   position: absolute;
   /*
-  top : 940px;
-  */
+    top : 940px;
+    */
   top: 120px;
 }
 
 .select-container {
   position: absolute;
   /*
-  top : 900px;
-  */
+    top : 900px;
+    */
   top: 60px;
   left: 100px;
 }
@@ -12334,13 +12336,16 @@ my style
   position: relative;
   opacity: 1;
   transform: scale(1, 1);
-  transition: all 1s ease-out; /*時間 特效*/
+  transition: all 1s ease-out;
+  /*時間 特效*/
 }
 
 /*滑鼠移入特效*/
 .effect-zoom-in:hover img {
-  opacity: 0.8; /*透明度*/
-  transform: scale(1.2, 1.2); /*XY放大倍率*/
+  opacity: 0.8;
+  /*透明度*/
+  transform: scale(1.2, 1.2);
+  /*XY放大倍率*/
   border: 0px solid #ccc;
 }
 
@@ -12386,9 +12391,13 @@ my style
 .pics img {
   position: absolute;
   /* 淡出淡入效果2秒 */
-  /* 供應商前綴 */ /* 用於 Chrome, Safari, 新版本的 Opera 和其他基於 WebKit 或 Blink 的瀏覽器 */ /* 用於 Firefox */ /* 用於舊版本的 Opera */
+  /* 供應商前綴 */
+  /* 用於 Chrome, Safari, 新版本的 Opera 和其他基於 WebKit 或 Blink 的瀏覽器 */
+  /* 用於 Firefox */
+  /* 用於舊版本的 Opera */
   transition: opacity 0.5s ease-in-out;
-  transition: all 0.8s ease-out; /* 時間 特效 */
+  transition: all 0.8s ease-out;
+  /* 時間 特效 */
   transform: scale(1, 1);
 }
 
